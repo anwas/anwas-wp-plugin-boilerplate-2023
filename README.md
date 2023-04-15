@@ -1,5 +1,9 @@
 ![GitHub contributors](https://img.shields.io/github/contributors/anwas/anwas-wp-plugin-boilerplate-2023) ![GitHub last commit](https://img.shields.io/github/last-commit/anwas/anwas-wp-plugin-boilerplate-2023) ![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/anwas/anwas-wp-plugin-boilerplate-2023)
 
+# Very Important
+
+All plugin code is provided as is. The developer of the plugin accepts no responsibility for any corruption or loss of data. Use this code at your own risk.
+
 # Anwas WordPress Plugin Boilerplate 2023
 
 The goal is still a standardized, organized, object-oriented foundation for building high-quality WordPress Plugins.
@@ -22,7 +26,7 @@ Some comments inside the Boilerplate may need to be rewritten as well, and adapt
 For example, if your plugin is named 'example-me' then:
 
 -   rename files from `plugin-name` to `example-me`
--   change `plugin_name` to `example_me`
+-   change `plugin_name` to `example_me` (but dont't rename $plugin_name, $this->plugin_name and get_plugin_name)
 -   change `plugin-name` to `example-me`
 -   change `Plugin_Name` to `Example_Me`
 -   change `PLUGIN_NAME_` to `EXAMPLE_ME_`
