@@ -2,7 +2,7 @@
 
 # Very Important
 
-All plugin code is provided as is. The developer of the plugin accepts no responsibility for any corruption or loss of data. Use this code at your own risk.
+All plugin code is provided as is. The developer of the plugin accepts no responsibility for the use of this code. Please use this code at your own risk.
 
 # Anwas WordPress Plugin Boilerplate 2023
 

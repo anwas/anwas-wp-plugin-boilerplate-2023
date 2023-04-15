@@ -196,16 +196,18 @@ final class Plugin_Name {
 	private function define_admin_hooks() {
 		$plugin_blocks = new \Plugin_Name\Plugin_Name_Blocks();
 
+		// If need, uncomment next add_action lines.
+
 		/*
 		 * In order to have a taxonomy appear in the URL hierarchy of the relevant CPT,
 		 * you can rewrite the taxonomy slug to contain the CPT’s slug.
 		 * But you must register the CPT after registering the taxonomy,
 		 * otherwise the rewrite will not work.
 		 */
-		\add_action( 'init', array( $this, 'action_register_custom_taxonomies' ), 0 );
-		\add_action( 'init', array( $this, 'action_register_custom_post_types' ), 10 );
+		// \add_action( 'init', array( $this, 'action_register_custom_taxonomies' ), 0 );
+		// \add_action( 'init', array( $this, 'action_register_custom_post_types' ), 10 );
 
-		\add_action( 'init', array( $plugin_blocks, 'action_register_block_types' ) );
+		// \add_action( 'init', array( $plugin_blocks, 'action_register_block_types' ) );
 	}
 
 	/**
