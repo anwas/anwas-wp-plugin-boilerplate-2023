@@ -35,59 +35,24 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-if ( ! defined( '\Plugin_Name\PLUGIN_VERSION' ) ) {
-	/**
-	 * Currently plugin version.
-	 * Start at version 1.0.0 and use SemVer - https://semver.org
-	 * Rename this for your plugin and update it as you release new versions.
-	 */
-	define( 'Plugin_Name\PLUGIN_VERSION', '1.0.0' );
-}
-
-if ( ! defined( '\Plugin_Name\PLUGIN_PREFIX' ) ) {
-	/**
-	 * The unique prefix of this plugin.
-	 * Rename this for your own.
-	 */
-	define( 'Plugin_Name\PLUGIN_PREFIX', 'plugin_name' );
-}
-
-if ( ! defined( '\Plugin_Name\REQUIRED_CAP' ) ) {
-	/**
-	 * The name of the management capability of this plugin.
-	 */
-	define( 'Plugin_Name\REQUIRED_CAP', PLUGIN_PREFIX . '_plugin_manage' );
-}
-
-if ( ! defined( '\Plugin_Name\PLUGIN_DIR' ) ) {
-	/**
-	 * The DIR PATH of this plugin with trailing slash.
-	 */
-	define( 'Plugin_Name\PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
-}
-
-if ( ! defined( '\Plugin_Name\PLUGIN_URI' ) ) {
-	/**
-	 * The URL of this plugin with trailing slash.
-	 */
-	define( 'Plugin_Name\PLUGIN_URI', plugin_dir_url( __FILE__ ) );
-}
+// Require file with defined plugin constants.
+require_once __DIR__ . '/plugin-name-constants.php';
 
 /**
  * The code that runs during plugin activation.
- * This action is documented in includes/plugin-name-activator.php
+ * This action is documented in includes/Plugin_Name_Activator.php
  */
 function plugin_name_activate() {
-	require_once \Plugin_Name\PLUGIN_DIR . 'includes/plugin-name-activator.php';
+	require_once \Plugin_Name\PLUGIN_PATH . 'includes/Plugin_Name_Activator.php';
 	\Plugin_Name\Plugin_Name_Activator::activate();
 }
 
 /**
  * The code that runs during plugin deactivation.
- * This action is documented in includes/plugin-name-deactivator.php
+ * This action is documented in includes/Plugin_Name_Deactivator.php
  */
 function plugin_name_deactivate() {
-	require_once \Plugin_Name\PLUGIN_DIR . 'includes/plugin-name-deactivator.php';
+	require_once \Plugin_Name\PLUGIN_PATH . 'includes/Plugin_Name_Deactivator.php';
 	\Plugin_Name\Plugin_Name_Deactivator::deactivate();
 }
 
@@ -98,7 +63,7 @@ register_deactivation_hook( __FILE__, __NAMESPACE__ . '\\plugin_name_deactivate'
  * The core plugin class that is used to define internationalization,
  * admin-specific hooks, and public-facing site hooks.
  */
-require \Plugin_Name\PLUGIN_DIR . 'includes/plugin-name.php';
+require \Plugin_Name\PLUGIN_PATH . 'includes/Plugin_Name.php';
 
 /**
  * Begins execution of the plugin.
