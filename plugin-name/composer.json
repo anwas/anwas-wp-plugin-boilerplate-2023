@@ -1,0 +1,16 @@
+{
+	"name": "anwas/plugin-name",
+	"description": "",
+	"authors": [
+		{
+			"name": "Your Name",
+			"email": "user@example.com"
+		}
+	],
+	"require": {},
+	"autoload": {
+		"psr-4": {
+			"Plugin_Name\\": "includes/"
+		}
+	}
+}
